@@ -381,7 +381,7 @@ class FirebaseChatCore {
           .doc(roomId)
           .update({
         'updatedAt': FieldValue.serverTimestamp(),
-        'lastMessages': [message],
+        'lastMessage': message.toJson(),
       });
     }
   }
